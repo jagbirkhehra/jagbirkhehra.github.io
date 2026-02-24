@@ -20,6 +20,19 @@
                 href="http://localhost:1313/es/blogs/"
                 />
   </url><url>
+    <loc>http://localhost:1313/es/tags/ejemplo/</loc>
+    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/ejemplo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/tags/ejemplo/"
+                />
+  </url><url>
     <loc>http://localhost:1313/es/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
     <xhtml:link
@@ -36,19 +49,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="http://localhost:1313/es/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/ejemplo/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/ejemplo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/ejemplo/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/tags/mathjax/</loc>
