@@ -20,19 +20,6 @@
                 href="http://localhost:1313/fr/blogs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/tags/exemple/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/exemple/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/tags/exemple/"
-                />
-  </url><url>
     <loc>http://localhost:1313/fr/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
     <xhtml:link
@@ -49,6 +36,19 @@
                 rel="alternate"
                 hreflang="fr"
                 href="http://localhost:1313/fr/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/fr/tags/exemple/</loc>
+    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/exemple/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/tags/exemple/"
                 />
   </url><url>
     <loc>http://localhost:1313/fr/tags/mathjax/</loc>
@@ -169,11 +169,6 @@
   </url><url>
     <loc>http://localhost:1313/fr/blogs/emoji-support/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blogs/emoji-support/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
