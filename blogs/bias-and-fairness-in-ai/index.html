@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href="/favicon.png" type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/blogs/bias-and-fairness-in-ai/">
+  <meta property="og:site_name" content="Dr. Jagbir Kaur| Data Analyst | PhD Mathematics">
+  <meta property="og:title" content="When the Algorithm Is Wrong: Understanding Bias and Fairness in AI">
+  <meta property="og:description" content="AI systems are only as fair as the data and decisions that shape them. This post explores how algorithmic bias emerges, why it matters, and what we can actually do about it.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2026-02-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-10T00:00:00+00:00">
+    <meta property="article:tag" content="AI Ethics">
+    <meta property="article:tag" content="Algorithmic Bias">
+    <meta property="article:tag" content="Fairness">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Governance">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="When the Algorithm Is Wrong: Understanding Bias and Fairness in AI">
+  <meta name="twitter:description" content="AI systems are only as fair as the data and decisions that shape them. This post explores how algorithmic bias emerges, why it matters, and what we can actually do about it.">
+
+
+
+
+  
+    <link rel="alternate" hreflang="en" href="http://localhost:1313/blogs/bias-and-fairness-in-ai/" title="English">
+  
+  
+  <meta property="og:locale" content="en">
+  
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="AI systems are only as fair as the data and decisions that shape them. This post explores how algorithmic bias emerges, why it matters, and what we can actually do about it.">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+When the Algorithm Is Wrong: Understanding Bias and Fairness in AI | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="favicon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Hugo Profile
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Image gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+<li class="nav-item navbar-text dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        
+            🌐
+            <span class="d-none d-md-inline">English</span>
+        
+    </a>
+    <div class="dropdown-menu shadow-lg rounded" aria-labelledby="languageDropdown"><a class="dropdown-item text-center nav-link active" 
+               href="/" 
+               title="English">
+                English
+            </a><a class="dropdown-item text-center nav-link" 
+               href="/fr/" 
+               title="Français">
+                Français
+            </a><a class="dropdown-item text-center nav-link" 
+               href="/es/" 
+               title="Español">
+                Español
+            </a></div>
+</li>
+
+
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">When the Algorithm Is Wrong: Understanding Bias and Fairness in AI</h1>
+            <div class="text-center">
+              
+                Data Science Student
+                <small>|</small>
+              
+              Feb 10, 2026
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="When the Algorithm Is Wrong: Understanding Bias and Fairness in AI">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h1 id="when-the-algorithm-is-wrong-understanding-bias-and-fairness-in-ai">When the Algorithm Is Wrong: Understanding Bias and Fairness in AI</h1>
+<blockquote>
+<p><em>&ldquo;A system is only as fair as the values baked into it and most of us never get to see those values written down.&rdquo;</em></p>
+</blockquote>
+<p>I used to assume that algorithms were neutral. After all, they are just math, right? Numbers do not have opinions. Code does not discriminate. But the more I have studied AI ethics, the more I have come to understand that this assumption is not just wrong it is dangerous.</p>
+<p>Bias does not appear in AI systems because someone sat down and decided to be unfair. It seeps in quietly, carried by historical data, encoded in design choices, and amplified by systems that scale to millions of decisions. By the time we notice it, real people have already been harmed.</p>
+<p>This post is my attempt to make sense of how bias enters AI systems, why fairness is so difficult to define and achieve, and what we can do — individually and collectively to build something better.</p>
+<hr>
+<h2 id="what-is-algorithmic-bias-and-where-does-it-come-from">What Is Algorithmic Bias, and Where Does It Come From?</h2>
+<p><strong>Algorithmic bias</strong> refers to systematic and unfair discrimination produced by an AI system. It shows up as outputs that consistently disadvantage certain groups of people by race, gender, age, disability status, or other characteristics in ways that cannot be justified by the task at hand.</p>
+<p>But bias does not appear out of nowhere. It has origins, and understanding them is the first step toward addressing it.</p>
+<h3 id="historical-bias-in-training-data">Historical Bias in Training Data</h3>
+<p>Most machine learning models learn from historical data. The problem is that history is not neutral. Historical data reflects the inequalities, prejudices, and structural injustices of the past. When a model is trained on that data, it does not just learn patterns it learns those biases too, and then applies them to future decisions.</p>
+<p>A hiring algorithm trained on resumes from the past two decades will observe that most senior roles were held by men. Without careful intervention, it will learn to favour male candidates not because it was programmed to discriminate, but because that is what the data showed.</p>
+<h3 id="measurement-bias">Measurement Bias</h3>
+<p>Sometimes the problem is not the data itself, but what we chose to measure. If a model is trained to predict &ldquo;employee success&rdquo; but success is measured by promotion rates and promotion rates have historically favoured certain demographic groups then the model is learning a biased proxy, not genuine performance.</p>
+<h3 id="feedback-loops">Feedback Loops</h3>
+<p>AI systems deployed in the real world often create <strong>feedback loops</strong>. A predictive policing algorithm sends more officers to certain neighbourhoods. More policing leads to more arrests in those neighbourhoods. Those arrests feed back into the model as confirmation that those areas are high-crime. The system reinforces its own bias, and the loop becomes self-sustaining.</p>
+<hr>
+<h2 id="a-real-world-example-compas-and-criminal-justice">A Real-World Example: COMPAS and Criminal Justice</h2>
+<p>Perhaps the most studied and troubling example of algorithmic bias is <strong>COMPAS</strong> (Correctional Offender Management Profiling for Alternative Sanctions), a risk assessment tool used in the United States criminal justice system. COMPAS assigns defendants a risk score, a number that is intended to predict the likelihood of reoffending — and judges in some jurisdictions have used this score to inform bail, sentencing, and parole decisions.</p>
+<p>In 2016, the investigative journalism outlet ProPublica published an analysis of COMPAS that sent shockwaves through the AI ethics community. Their findings were striking:</p>
+<ul>
+<li>Black defendants were <strong>nearly twice as likely</strong> to be falsely flagged as high risk compared to white defendants.</li>
+<li>White defendants were more likely to be incorrectly labelled as low risk and then went on to reoffend.</li>
+</ul>
+<p>The company behind COMPAS argued that the tool was fair because it had equal predictive accuracy across racial groups overall. But ProPublica&rsquo;s analysis showed that when you broke down the types of errors, the false positive rate (wrongly labelling someone as high risk) was significantly higher for Black defendants. This is a critical distinction: <strong>overall accuracy can mask deeply unequal error distributions</strong>.</p>
+<p>The COMPAS case is not just a technical story. It is a story about what happens when an opaque AI system is used to make life-altering decisions about people without those people having any meaningful ability to understand, challenge, or appeal the result. It touches on <strong>algorithmic accountability</strong>, <strong>transparency</strong>, and the limits of technical fixes to deeply human problems.</p>
+<hr>
+<h2 id="why-fairness-is-harder-than-it-sounds">Why Fairness Is Harder Than It Sounds</h2>
+<p>Here is the uncomfortable truth that I keep running into in my studies: <strong>fairness is not a single, agreed-upon concept</strong>. Mathematicians and ethicists have identified multiple definitions of fairness, and they are often mathematically incompatible with each other.</p>
+<p>Consider these three definitions:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Fairness Definition</th>
+          <th>What It Means</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Demographic parity</strong></td>
+          <td>The model&rsquo;s positive outcomes are distributed equally across groups</td>
+      </tr>
+      <tr>
+          <td><strong>Equal opportunity</strong></td>
+          <td>The model has the same true positive rate across groups</td>
+      </tr>
+      <tr>
+          <td><strong>Individual fairness</strong></td>
+          <td>Similar individuals should receive similar predictions</td>
+      </tr>
+  </tbody>
+</table>
+<p>The problem is that you generally cannot satisfy all three at the same time. Optimising for one measure of fairness often comes at the cost of another. This is not a bug that better engineering can fix it is a fundamental tension that requires human judgment about which values matter most in a given context.</p>
+<p>This is why AI ethics cannot be reduced to a technical checklist. Deciding what counts as fair is a <strong>normative question</strong>, a question about values and it belongs in the hands of the communities affected by the system, not just the engineers who built it.</p>
+<hr>
+<h2 id="the-role-of-ethical-ai-frameworks-and-governance">The Role of Ethical AI Frameworks and Governance</h2>
+<p>So how do we actually move forward? This is where <strong>ethical AI frameworks</strong> and <strong>AI governance</strong> become important.</p>
+<p>Ethical AI frameworks such as the European Union&rsquo;s Ethics Guidelines for Trustworthy AI, or the OECD Principles on AI provide a set of principles that AI developers and organisations are encouraged to follow. These typically include values like:</p>
+<ul>
+<li><strong>Fairness and non-discrimination</strong></li>
+<li><strong>Transparency and explainability</strong></li>
+<li><strong>Accountability</strong></li>
+<li><strong>Human oversight</strong></li>
+<li><strong>Privacy protection</strong></li>
+</ul>
+<p>These frameworks are a meaningful step. They signal that the tech industry and governments are taking these issues seriously. But they are largely voluntary, which brings up an important concept from this week&rsquo;s course material: <strong>soft ethics</strong>.</p>
+<h3 id="soft-ethics-as-a-bridge">Soft Ethics as a Bridge</h3>
+<p>Soft ethics refers to ethical guidance that operates outside the boundaries of formal law, norms, standards, professional codes of conduct, and voluntary commitments that shape behaviour without legal enforcement. As Floridi (2023) discusses, soft ethics can play a vital role in filling the gaps left by regulation, particularly in fast-moving fields like AI where legislation often struggles to keep pace with technology.</p>
+<p>In practice, soft ethics might look like:</p>
+<ul>
+<li>A company voluntarily publishing its model fairness metrics</li>
+<li>A data science team adopting an internal ethics review process before deploying a model</li>
+<li>Professional associations creating codes of conduct that members are expected to follow</li>
+</ul>
+<p>Soft ethics is not a replacement for strong regulation but it is better than nothing, and in many cases, it is what we have right now.</p>
+<hr>
+<h2 id="what-can-actually-be-done">What Can Actually Be Done?</h2>
+<p>Understanding bias is one thing. Addressing it is another. Here are some of the strategies that researchers, practitioners, and policymakers are using to promote fairer AI.</p>
+<h3 id="1-diverse-and-representative-data">1. Diverse and Representative Data</h3>
+<p>The most fundamental intervention is to ensure training data is diverse and representative of the population the model will serve. This sounds simple, but it requires deliberate effort and sometimes collecting new data from underrepresented groups.</p>
+<h3 id="2-fairness-audits">2. Fairness Audits</h3>
+<p>Before a model is deployed especially in high-stakes domains like hiring, lending, healthcare, or criminal justice, it should undergo a <strong>fairness audit</strong>. This means systematically testing for disparate outcomes across demographic groups and documenting the results.</p>
+<h3 id="3-explainability">3. Explainability</h3>
+<p>If a system cannot explain why it made a decision, it is very hard to challenge that decision or identify where bias crept in. <strong>Explainability</strong> sometimes called <strong>interpretability</strong>, is increasingly seen as both an ethical requirement and a practical safeguard. Tools like SHAP (SHapley Additive exPlanations) and LIME (Local Interpretable Model-agnostic Explanations) are making progress in this area, though there is still a long way to go.</p>
+<h3 id="4-ongoing-monitoring">4. Ongoing Monitoring</h3>
+<p>Bias is not a one-time problem that you fix at deployment. Because of feedback loops and changing data distributions, models can become more biased over time. This means monitoring for fairness needs to be continuous, not a one-off checkbox.</p>
+<h3 id="5-participatory-design">5. Participatory Design</h3>
+<p>Perhaps the most underused approach is involving affected communities in the design and evaluation of AI systems. People who will be subject to a model&rsquo;s decisions should have a meaningful voice in determining what fairness looks like for their context. This aligns with what Floridi (2023) describes as <strong>human-centric AI</strong>, placing human dignity and agency at the centre of how AI is built and governed.</p>
+<hr>
+<h2 id="my-honest-reflection">My Honest Reflection</h2>
+<p>I will be transparent: before this course, I thought about AI bias mostly as a technical problem. Something to fix with better data cleaning or smarter algorithms. What I have come to appreciate is that it is fundamentally a <strong>social and ethical problem</strong> one that requires social and ethical solutions alongside technical ones.</p>
+<p>The COMPAS example sticks with me because it shows what is at stake. When an algorithm makes a mistake in a low-risk app, the consequences are minor. When an algorithm makes a systematic mistake in a courtroom, people lose their freedom. The higher the stakes, the more carefully we need to think about what it means to be fair and the more rigorously we need to hold ourselves and our systems accountable.</p>
+<hr>
+<h2 id="conclusion-fair-enough-is-not-good-enough">Conclusion: Fair Enough Is Not Good Enough</h2>
+<p>Bias and fairness in AI is not a niche academic topic. It is one of the defining ethical challenges of our time, as AI systems increasingly shape who gets hired, who gets a loan, who gets paroled, and who gets flagged by law enforcement.</p>
+<p>The five key concepts I have tried to weave through this post <strong>algorithmic bias</strong>, <strong>algorithmic accountability</strong>, <strong>soft ethics</strong>, <strong>explainability</strong>, and <strong>human-centric AI</strong> — are not just buzzwords. They are tools for thinking clearly about what we want from these systems and how to get there.</p>
+<p>The good news is that fairness is achievable not perfectly, and not without trade-offs, but meaningfully. It requires diverse teams, honest audits, transparent systems, engaged communities, and a willingness to keep asking hard questions even when the answers are inconvenient.</p>
+<p>Because &ldquo;fair enough&rdquo; is not good enough when real people&rsquo;s lives are on the line.</p>
+<hr>
+<p><em>Reference: Floridi, L. (2023). The Ethics of Artificial Intelligence: Principles, Challenges, and Opportunities. Oxford University Press.</em></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-algorithmic-bias-and-where-does-it-come-from">What Is Algorithmic Bias, and Where Does It Come From?</a>
+      <ul>
+        <li><a href="#historical-bias-in-training-data">Historical Bias in Training Data</a></li>
+        <li><a href="#measurement-bias">Measurement Bias</a></li>
+        <li><a href="#feedback-loops">Feedback Loops</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-real-world-example-compas-and-criminal-justice">A Real-World Example: COMPAS and Criminal Justice</a></li>
+    <li><a href="#why-fairness-is-harder-than-it-sounds">Why Fairness Is Harder Than It Sounds</a></li>
+    <li><a href="#the-role-of-ethical-ai-frameworks-and-governance">The Role of Ethical AI Frameworks and Governance</a>
+      <ul>
+        <li><a href="#soft-ethics-as-a-bridge">Soft Ethics as a Bridge</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-can-actually-be-done">What Can Actually Be Done?</a>
+      <ul>
+        <li><a href="#1-diverse-and-representative-data">1. Diverse and Representative Data</a></li>
+        <li><a href="#2-fairness-audits">2. Fairness Audits</a></li>
+        <li><a href="#3-explainability">3. Explainability</a></li>
+        <li><a href="#4-ongoing-monitoring">4. Ongoing Monitoring</a></li>
+        <li><a href="#5-participatory-design">5. Participatory Design</a></li>
+      </ul>
+    </li>
+    <li><a href="#my-honest-reflection">My Honest Reflection</a></li>
+    <li><a href="#conclusion-fair-enough-is-not-good-enough">Conclusion: Fair Enough Is Not Good Enough</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              
+              <li class="list-inline-item"><a href="/tags/ai-ethics"
+                target="_blank"
+              >AI ethics</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/algorithmic-bias"
+                target="_blank"
+              >algorithmic bias</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/fairness"
+                target="_blank"
+              >fairness</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/machine-learning"
+                target="_blank"
+              >machine learning</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/governance"
+                target="_blank"
+              >governance</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=AI%20systems%20are%20only%20as%20fair%20as%20the%20data%20and%20decisions%20that%20shape%20them.%20This%20post%20explores%20how%20algorithmic%20bias%20emerges%2c%20why%20it%20matters%2c%20and%20what%20we%20can%20actually%20do%20about%20it. http%3a%2f%2flocalhost%3a1313%2fblogs%2fbias-and-fairness-in-ai%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='https://twitter.com/share?text=When%20the%20Algorithm%20Is%20Wrong%3a%20Understanding%20Bias%20and%20Fairness%20in%20AI&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fbias-and-fairness-in-ai%2f&hashtags=AI%20ethics%2calgorithmic%20bias%2cfairness%2cmachine%20learning%2cgovernance'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=When%20the%20Algorithm%20Is%20Wrong%3a%20Understanding%20Bias%20and%20Fairness%20in%20AI: http%3a%2f%2flocalhost%3a1313%2fblogs%2fbias-and-fairness-in-ai%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=When%20the%20Algorithm%20Is%20Wrong%3a%20Understanding%20Bias%20and%20Fairness%20in%20AI&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fblogs%2fbias-and-fairness-in-ai%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+
+
+  
+
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/anonymous-but-not-really/">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" class="card-img-top" alt="Anonymous But Not Really: The Hidden Ethics Problem in Your Course Survey">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/anonymous-but-not-really/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Anonymous But Not Really: The Hidden Ethics Problem in Your Course Survey">Anonymous But Not Really: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h1 id="anonymous-but-not-really-the-hidden-ethics-problem-in-your-course-survey">Anonymous But Not Really: The Hidden Ethics Problem in Your Course Survey</h1>
+<blockquote>
+<p><em>&ldquo;All answers and the survey itself will remain anonymous.&rdquo;</em><br>
+— The survey you just logged into with your username and password.</p>
+</blockquote>
+<p>Let that sink in for a moment.</p>
+<p>You&rsquo;ve been asked to evaluate a course. The …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">March 5, 2026</span>
+                    <a href="/blogs/anonymous-but-not-really/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/emoji/">
+                        <img src="/images/post.jpg" class="card-img-top" alt="My Transition from Mathematics to Data Analytics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/emoji/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="My Transition from Mathematics to Data Analytics">My Transition from …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>As a PhD in Mathematics and Assistant Professor, I developed strong analytical and problem-solving skills. I am now transitioning into Data Analytics and Artificial Intelligence.</p>
+<h2 id="i-am-learning">I am learning:</h2>
+<p>• Python for data analysis<br>
+• SQL for data querying<br>
+• Machine learning fundamentals<br>
+• Data visualization</p>
+<p>My …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">February 20, 2026</span>
+                    <a href="/blogs/emoji/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/bias-and-fairness-in-ai/">
+                        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" class="card-img-top" alt="When the Algorithm Is Wrong: Understanding Bias and Fairness in AI">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/bias-and-fairness-in-ai/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="When the Algorithm Is Wrong: Understanding Bias and Fairness in AI">When the Algorithm Is …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h1 id="when-the-algorithm-is-wrong-understanding-bias-and-fairness-in-ai">When the Algorithm Is Wrong: Understanding Bias and Fairness in AI</h1>
+<blockquote>
+<p><em>&ldquo;A system is only as fair as the values baked into it and most of us never get to see those values written down.&rdquo;</em></p>
+</blockquote>
+<p>I used to assume that algorithms were neutral. After all, they are just math, right? Numbers do not have …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">February 10, 2026</span>
+                    <a href="/blogs/bias-and-fairness-in-ai/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/" title="Dr. Jagbir Kaur| Data Analyst | PhD Mathematics">
+                        <img alt="Footer logo" src="favicon.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
+    <script src="/js/search.js"></script>
+
+
+
+
+
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

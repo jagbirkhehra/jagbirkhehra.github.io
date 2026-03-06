@@ -23,6 +23,13 @@
       <description>&lt;p&gt;As a PhD in Mathematics and Assistant Professor, I developed strong analytical and problem-solving skills. I am now transitioning into Data Analytics and Artificial Intelligence.&lt;/p&gt;&#xA;&lt;h2 id=&#34;i-am-learning&#34;&gt;I am learning:&lt;/h2&gt;&#xA;&lt;p&gt;• Python for data analysis&lt;br&gt;&#xA;• SQL for data querying&lt;br&gt;&#xA;• Machine learning fundamentals&lt;br&gt;&#xA;• Data visualization&lt;/p&gt;&#xA;&lt;p&gt;My goal is to apply mathematical and statistical knowledge to solve real-world data problems.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;.emoji {&#xA;  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
+      <title>When the Algorithm Is Wrong: Understanding Bias and Fairness in AI</title>
+      <link>http://localhost:1313/blogs/bias-and-fairness-in-ai/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/bias-and-fairness-in-ai/</guid>
+      <description>&lt;h1 id=&#34;when-the-algorithm-is-wrong-understanding-bias-and-fairness-in-ai&#34;&gt;When the Algorithm Is Wrong: Understanding Bias and Fairness in AI&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;A system is only as fair as the values baked into it and most of us never get to see those values written down.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I used to assume that algorithms were neutral. After all, they are just math, right? Numbers do not have opinions. Code does not discriminate. But the more I have studied AI ethics, the more I have come to understand that this assumption is not just wrong it is dangerous.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Renderizar Matemáticas con Mathjax</title>
       <link>http://localhost:1313/es/blogs/math/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>

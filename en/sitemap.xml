@@ -107,6 +107,24 @@
     <loc>http://localhost:1313/tags/sample/</loc>
     <lastmod>2026-02-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/ai-ethics/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/algorithmic-bias/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fairness/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/governance/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/bias-and-fairness-in-ai/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/es/blogs/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
   </url><url>
