@@ -2,13 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blogs/anonymous-but-not-really/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/blogs/"
-                />
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -16,23 +14,41 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/blogs/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/blogs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/blogs/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/fr/blogs/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/categories/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/"
+                href="http://localhost:1313/es/categories/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/data-ethics/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/data-science/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -40,9 +56,62 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/categories/ethics-in-data-science/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/informed-consent/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/privacy/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/survey-design/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/emoji-support/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/example/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/emoji/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sample/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/blogs/</loc>
+    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fr/blogs/</loc>
+    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ejemplo/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
@@ -58,9 +127,6 @@
                 />
   </url><url>
     <loc>http://localhost:1313/es/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/example/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/exemple/</loc>
@@ -79,16 +145,8 @@
     <loc>http://localhost:1313/fr/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown-syntax/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/mathjax/</loc>
     <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/mathjax/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -96,26 +154,13 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/tags/mathjax/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/tags/mathjax/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blogs/math/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/blogs/math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/blogs/math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blogs/math/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/blogs/math/</loc>
@@ -150,24 +195,6 @@
                 href="http://localhost:1313/tags/syntaxe-markdown/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2022-12-09T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-  </url><url>
     <loc>http://localhost:1313/es/gallery/</loc>
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
@@ -178,13 +205,13 @@
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/gallery/"
+                hreflang="fr"
+                href="http://localhost:1313/fr/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/gallery/"
+                hreflang="es"
+                href="http://localhost:1313/es/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -205,24 +232,6 @@
                 href="http://localhost:1313/tags/%C3%A9chantillon/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/markdown-syntax/</loc>
-    <lastmod>2021-04-03T23:29:21+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/blogs/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/blogs/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blogs/markdown-syntax/"
-                />
-  </url><url>
     <loc>http://localhost:1313/tags/muestra/</loc>
     <lastmod>2021-04-03T23:29:21+05:30</lastmod>
     <xhtml:link
@@ -235,9 +244,6 @@
                 hreflang="en"
                 href="http://localhost:1313/tags/muestra/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/tags/sample/</loc>
-    <lastmod>2021-04-03T23:29:21+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/blogs/markdown-syntax/</loc>
     <lastmod>2021-04-03T23:29:21+05:30</lastmod>
@@ -276,27 +282,6 @@
                 hreflang="en"
                 href="http://localhost:1313/tags/support-des-emoji/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/blogs/placeholder-text/</loc>
-    <lastmod>2021-04-03T22:41:10+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/blogs/placeholder-text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/blogs/placeholder-text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blogs/placeholder-text/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/placeholder-text/</loc>
-    <lastmod>2021-04-03T22:41:10+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/fr/blogs/placeholder-text/</loc>
     <lastmod>2021-04-03T22:41:10+05:30</lastmod>
@@ -360,44 +345,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/tags/contenu-enrichi/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blogs/rich-content/</loc>
-    <lastmod>2021-04-03T19:53:33+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/blogs/rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/blogs/rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blogs/rich-content/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/rich-content/</loc>
-    <lastmod>2021-04-03T19:53:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/"
                 />
   </url>
 </urlset>

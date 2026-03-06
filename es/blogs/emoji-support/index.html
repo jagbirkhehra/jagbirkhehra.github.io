@@ -56,9 +56,9 @@ La Hoja de trucos de Emoji es una referencia útil para los códigos abreviados 
 
 
   
-    <link rel="alternate" hreflang="es" href="http://localhost:1313/es/blogs/emoji-support/" title="Español">
-  
     <link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/blogs/emoji-support/" title="Français">
+  
+    <link rel="alternate" hreflang="es" href="http://localhost:1313/es/blogs/emoji-support/" title="Español">
   
   
   <meta property="og:locale" content="es">
@@ -96,7 +96,7 @@ La Hoja de trucos de Emoji es una referencia útil para los códigos abreviados 
     body {
         font-size: 1rem;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.6;
         text-align: left;
     }
 
@@ -263,6 +263,13 @@ Soporte de Emoji | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/es/#projects"
+                            aria-label="projects">
+                            Proyectos
+                        </a>
+                    </li>
+                    
 
                     
 
@@ -307,14 +314,14 @@ Soporte de Emoji | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
             <span class="d-none d-md-inline">Español</span>
         
     </a>
-    <div class="dropdown-menu shadow-lg rounded" aria-labelledby="languageDropdown"><a class="dropdown-item text-center nav-link active" 
-               href="/es/blogs/emoji-support/" 
-               title="Español">
-                Español
-            </a><a class="dropdown-item text-center nav-link" 
+    <div class="dropdown-menu shadow-lg rounded" aria-labelledby="languageDropdown"><a class="dropdown-item text-center nav-link" 
                href="/fr/blogs/emoji-support/" 
                title="Français">
                 Français
+            </a><a class="dropdown-item text-center nav-link active" 
+               href="/es/blogs/emoji-support/" 
+               title="Español">
+                Español
             </a></div>
 </li>
 
@@ -730,6 +737,24 @@ Soporte de Emoji | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
 
 
 
+
+
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
 
 
 

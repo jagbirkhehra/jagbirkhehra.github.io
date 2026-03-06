@@ -48,9 +48,9 @@
   
     <link rel="alternate" hreflang="en" href="http://localhost:1313/gallery/" title="English">
   
-    <link rel="alternate" hreflang="es" href="http://localhost:1313/es/gallery/" title="Español">
-  
     <link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/gallery/" title="Français">
+  
+    <link rel="alternate" hreflang="es" href="http://localhost:1313/es/gallery/" title="Español">
   
   
   <meta property="og:locale" content="fr">
@@ -90,7 +90,7 @@
     body {
         font-size: 1rem;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.6;
         text-align: left;
     }
 
@@ -260,6 +260,13 @@ Galerie d&#39;Images | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/fr/#projects"
+                            aria-label="projects">
+                            Projets
+                        </a>
+                    </li>
+                    
 
                     
 
@@ -308,14 +315,14 @@ Galerie d&#39;Images | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
                href="/gallery/" 
                title="English">
                 English
-            </a><a class="dropdown-item text-center nav-link" 
-               href="/es/gallery/" 
-               title="Español">
-                Español
             </a><a class="dropdown-item text-center nav-link active" 
                href="/fr/gallery/" 
                title="Français">
                 Français
+            </a><a class="dropdown-item text-center nav-link" 
+               href="/es/gallery/" 
+               title="Español">
+                Español
             </a></div>
 </li>
 
@@ -624,6 +631,24 @@ Galerie d&#39;Images | Dr. Jagbir Kaur| Data Analyst | PhD Mathematics
 
 
 
+
+
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha384-M5jmNxKC9EVnuqeMwRHvFuYUE8Hhp0TgBruj/GZRkYtiMrCRgH7yvv5KY+Owi7TW" crossorigin="anonymous"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+</script>
 
 
 
